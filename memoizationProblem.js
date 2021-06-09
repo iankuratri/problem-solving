@@ -34,12 +34,12 @@ function memoizedSquare() {
   };
 }
 
-const optimizedSquare = memoizedSquare();
+const memoSquare = memoizedSquare();
 
-console.log(optimizedSquare(2));
-console.log(optimizedSquare(3));
-console.log(optimizedSquare(4));
+console.log(memoSquare(2));
+console.log(memoSquare(3));
+console.log(memoSquare(4));
 
-console.log(optimizedSquare(2));
-console.log(optimizedSquare(3));
-console.log(optimizedSquare(4));
+console.log(memoSquare(2));
+console.log(memoSquare(3));
+console.log(memoSquare(4));
