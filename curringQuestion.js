@@ -1,8 +1,8 @@
 /**
- * create a function to achieve this functionality
+ * Question: Create a function to achieve functionality shown below:
  * sum(1)(2)(3)() = 6
- *  
- * */  
+ *
+ * */
 
 function sum(init) {
   return function (number) {
