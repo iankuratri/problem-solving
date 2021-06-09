@@ -14,6 +14,10 @@
  * will return from cache the already computed result
  */
 
+function square(num) {
+  return num * num;
+}
+
 function memoizedSquare() {
   const cache = {};
 
@@ -23,9 +27,9 @@ function memoizedSquare() {
       return cache[num];
     } else {
       console.log(`calculating square of ${num}:`);
-      const square = num * num;
-      cache[num] = square;
-      return square;
+      const result = square(num);
+      cache[num] = result;
+      return result;
     }
   };
 }
