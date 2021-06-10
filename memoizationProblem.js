@@ -84,3 +84,38 @@ console.log(memoSum(4, 5));
 console.log(memoSum(1, 2));
 console.log(memoSum(2, 3));
 console.log(memoSum(4, 5));
+
+/**
+ * Problem 3
+ *
+ * Implement the 'once' utlity function
+ *
+ * It runs the callback function only once and for every subsequent call,
+ * it returns the result of the previous function call
+ */
+
+function connectDatabase() {
+  return "database connected...";
+}
+
+function callOnce(func) {
+  let result = null;
+  let called = false;
+
+  return function () {
+    if (!called) {
+      console.log("function called...");
+      result = func.apply(this, arguments);
+      called = true;
+      return result;
+    } else {
+      console.log("returning saved result...");
+      return result;
+    }
+  };
+}
+
+const intilizeDatabase = callOnce(connectDatabase);
+
+console.log("First time:", intilizeDatabase());
+console.log("Second time:", intilizeDatabase());
