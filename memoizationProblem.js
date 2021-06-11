@@ -109,7 +109,7 @@ function callOnce(func) {
       called = true;
       return result;
     } else {
-      console.log("returning saved result...");
+      console.log("function already called and here is the saved result...");
       return result;
     }
   };
