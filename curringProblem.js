@@ -5,12 +5,15 @@
  * */
 
 function sum(init) {
-  return function (number) {
-    if (number) {
-      return sum(init + number);
+  let total = init;
+
+  return function add(input) {
+    if (input !== undefined) {
+      total = total + input;
+      return add;
     }
 
-    return init;
+    return total;
   };
 }
 
