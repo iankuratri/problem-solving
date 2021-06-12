@@ -4,12 +4,12 @@
  *
  * */
 
-function sum(init) {
-  let total = init;
+function sum(numberOne) {
+  let total = numberOne;
 
-  return function add(input) {
-    if (input !== undefined) {
-      total = total + input;
+  return function add(numberTwo) {
+    if (numberTwo !== undefined) {
+      total = total + numberTwo;
       return add;
     }
 
