@@ -1,5 +1,5 @@
 /**
- * String Palindrome
+ * Palindrome
  *
  * Given a string (str), determine if it is a palindrome.
  *

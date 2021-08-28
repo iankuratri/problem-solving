@@ -1,5 +1,5 @@
 /**
- * String Anagram
+ * Anagram
  *
  * Given two strings (str1 and str2), determine if str1 is anagram of str2.
  *
