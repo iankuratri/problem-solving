@@ -68,3 +68,18 @@ console.log("flatArray using flatten: ", flatArray);
 
 const flatArray2 = input.flatIt();
 console.log("flatArray using flatIt: ", flatArray2);
+
+/** Solution 3 */
+
+function flattenArray(arr) {
+  return arr.reduce((acc, curr) => {
+    if (Array.isArray(curr)) {
+      acc = acc.concat(flattenArray(curr)); // Recursively flatten
+    } else {
+      acc = acc.concat(curr);
+    }
+    return acc;
+  }, []);
+}
+
+console.log(flattenArray([1, [2], [3, [[4]]]])); // Returns [1, 2, 3, 4]
