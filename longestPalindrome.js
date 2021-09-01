@@ -10,8 +10,6 @@ Note: This is case sensitive, for example "Aa" is not considered a palindrome.
 
 */
 
-// Test Case
-
 function longestPalindrome(str) {
   const characters = new Set();
   let length = 0;
@@ -33,4 +31,5 @@ function longestPalindrome(str) {
   }
 }
 
+// Test Case
 console.log(longestPalindrome("abccccdd")); // Returns 7 ('dccaccd')
